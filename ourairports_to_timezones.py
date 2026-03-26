@@ -149,7 +149,11 @@ def main() -> int:
         fieldnames = ["iata_code", "icao_code", "timezone"]
 
     with open(args.output, "w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer = csv.DictWriter(
+            f,
+            fieldnames=fieldnames,
+            extrasaction="ignore",
+        )
         writer.writeheader()
         writer.writerows(output_rows)
 
