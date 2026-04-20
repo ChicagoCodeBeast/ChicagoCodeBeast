@@ -238,3 +238,119 @@ Branch behavior note:
 Detailed support doc:
 
 - `MDS_CM_UDID_To_Snowflake/IDMC_INTEGRATION_SUPPORT.md`
+
+---
+
+## Additional Integration: MDS_SM_SupplierManagement_To_Snowflake
+
+### Overview
+
+This repository also contains an Informatica Intelligent Data Management Cloud
+(IDMC) export package for loading supplier management data from MDS into
+Snowflake.
+
+The package name is:
+
+- `MDS_SM_SupplierManagement_To_Snowflake-1776711807250`
+
+Primary integration flow:
+
+1. Taskflow `tf_Load_MDS_SM` starts.
+2. The taskflow runs fifteen mapping tasks in parallel.
+3. Each mapping task executes its corresponding supplier management mapping.
+4. Data is moved through `US_SQL_SERVER_MDS` and `US_Snowflake` connections.
+
+---
+
+### IDMC Assets Included
+
+From
+`MDS_SM_SupplierManagement_To_Snowflake/ContentsofExportPackage_MDS_SM_SupplierManagement_To_Snowflake-1776711807250.csv`
+and `MDS_SM_SupplierManagement_To_Snowflake/exportMetadata.v2.json`:
+
+#### Connections and Runtime
+
+- **Connection**: `US_Snowflake` (`/SYS`)
+- **Connection**: `US_SQL_SERVER_MDS` (`/SYS`)
+- **Secure Agent Group**: `DT_US_Secure_Agent` (`/SYS`)
+
+#### Data Integration Objects
+
+- **Project**: `Data _Integration` (`/Explore`)
+- **Folder**: `MDS_SM_SupplierManagement_To_Snowflake`
+  (`/Explore/Data _Integration`)
+- **Taskflow**: `tf_Load_MDS_SM`
+
+Mapping tasks:
+
+- `mt_SM_Airport`
+- `mt_SM_Airport_City`
+- `mt_SM_City`
+- `mt_SM_Country`
+- `mt_SM_DT_Region`
+- `mt_SM_GDS`
+- `mt_SM_GDS_Hotel_Property`
+- `mt_SM_GDS_Rate_Code`
+- `mt_SM_Hotel_Chain`
+- `mt_SM_Hotel_Master_Chain`
+- `mt_SM_Hotel_Property`
+- `mt_SM_IATA_Location`
+- `mt_SM_Rate_Category`
+- `mt_SM_State_Province`
+- `mt_SM_World_Region`
+
+Mappings:
+
+- `m_SM_Airport`
+- `m_SM_Airport_City`
+- `m_SM_City`
+- `m_SM_Country`
+- `m_SM_DT_Region`
+- `m_SM_GDS`
+- `m_SM_GDS_Hotel_Property`
+- `m_SM_GDS_Rate_Code`
+- `m_SM_Hotel_Chain`
+- `m_SM_Hotel_Master_Chain`
+- `m_SM_Hotel_Property`
+- `m_SM_IATA_Location`
+- `m_SM_Rate_Category`
+- `m_SM_State_Province`
+- `m_SM_World_Region`
+
+---
+
+### Runtime Behavior (Taskflow)
+
+The taskflow `tf_Load_MDS_SM` calls `ICSExecuteDataTask` service steps for all
+fifteen mapping tasks in parallel.
+
+Observed execution settings:
+
+- `Wait for Task to Complete = true`
+- `Max Wait = 604800` seconds (7 days)
+- `Task Type = MCT`
+- `Has Inout Parameters = true`
+
+Task outputs captured per branch include run identifiers, status, row counts,
+timing fields, error fields, and inout value `LastChgDateTime`.
+
+Branch behavior note:
+
+- All task references in this taskflow are configured with:
+  - `failOnNotRun = true`
+  - `failOnFault = true`
+
+---
+
+### Repository File Map (Supplier Management Package)
+
+- `MDS_SM_SupplierManagement_To_Snowflake/exportMetadata.v2.json`
+- `MDS_SM_SupplierManagement_To_Snowflake/ContentsofExportPackage_MDS_SM_SupplierManagement_To_Snowflake-1776711807250.csv`
+- `MDS_SM_SupplierManagement_To_Snowflake/Explore/Data _Integration/MDS_SM_SupplierManagement_To_Snowflake/tf_Load_MDS_SM.TASKFLOW.xml`
+- `MDS_SM_SupplierManagement_To_Snowflake/Explore/Data _Integration/MDS_SM_SupplierManagement_To_Snowflake.Folder.json`
+- `MDS_SM_SupplierManagement_To_Snowflake/Explore/Data _Integration.Project.json`
+- `MDS_SM_SupplierManagement_To_Snowflake/exportPackage.chksum`
+
+Detailed support doc:
+
+- `MDS_SM_SupplierManagement_To_Snowflake/IDMC_INTEGRATION_SUPPORT.md`
