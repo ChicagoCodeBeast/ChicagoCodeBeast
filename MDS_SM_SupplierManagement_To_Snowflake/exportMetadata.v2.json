@@ -1,0 +1,893 @@
+{
+  "name" : "MDS_SM_SupplierManagement_To_Snowflake-1776711807250",
+  "sourceOrgId" : "laoRDdlSpqyeWUf1Juzbeh",
+  "sourceOrgName" : "Direct Travel Inc.  PROD",
+  "exportedObjects" : [ {
+    "objectGuid" : "2Tptfvc47DVguCpm6rcAyL",
+    "objectName" : "mt_SM_GDS_Rate_Code",
+    "objectType" : "MTT",
+    "path" : "/Explore/Data _Integration/MDS_SM_SupplierManagement_To_Snowflake",
+    "providerName" : null,
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01D3R50Z0000000000MF"
+      },
+      "objectRefs" : [ "6cBlJoDpmsLlQ2p4YF0GQf", "07fJJzT4TXkkU4qr4X91kg", "a7nrLxYyyu5es6Ljmi9Jah", "i1ZklYrqQ60dtODSlhhN2m" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "9AtbJTeQgHVe2DlJ2FvPYb",
+    "objectName" : "m_SM_Hotel_Property",
+    "objectType" : "DTEMPLATE",
+    "path" : "/Explore/Data _Integration/MDS_SM_SupplierManagement_To_Snowflake",
+    "providerName" : null,
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01D3R5170000000000G0"
+      },
+      "objectRefs" : [ "07fJJzT4TXkkU4qr4X91kg", "i1ZklYrqQ60dtODSlhhN2m" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "bopM7Jltxg5kgyWtiphdwd",
+    "objectName" : "mt_SM_Hotel_Chain",
+    "objectType" : "MTT",
+    "path" : "/Explore/Data _Integration/MDS_SM_SupplierManagement_To_Snowflake",
+    "providerName" : null,
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01D3R50Z0000000000MK"
+      },
+      "objectRefs" : [ "07fJJzT4TXkkU4qr4X91kg", "a7nrLxYyyu5es6Ljmi9Jah", "jUBhs8eZ3cxjie017WWdmK", "i1ZklYrqQ60dtODSlhhN2m" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "a7nrLxYyyu5es6Ljmi9Jah",
+    "objectName" : "DT_US_Secure_Agent",
+    "objectType" : "AgentGroup",
+    "path" : "/SYS",
+    "providerName" : null,
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01D3R52500000000001G"
+      },
+      "objectRefs" : [ ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "0tP8X1mav7ue5ELlD0ntWG",
+    "objectName" : "m_SM_City",
+    "objectType" : "DTEMPLATE",
+    "path" : "/Explore/Data _Integration/MDS_SM_SupplierManagement_To_Snowflake",
+    "providerName" : null,
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01D3R5170000000000FI"
+      },
+      "objectRefs" : [ "07fJJzT4TXkkU4qr4X91kg", "i1ZklYrqQ60dtODSlhhN2m" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "2XuljHmwkVmcsb4JN3CKwk",
+    "objectName" : "m_SM_GDS",
+    "objectType" : "DTEMPLATE",
+    "path" : "/Explore/Data _Integration/MDS_SM_SupplierManagement_To_Snowflake",
+    "providerName" : null,
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01D3R5170000000000FR"
+      },
+      "objectRefs" : [ "07fJJzT4TXkkU4qr4X91kg", "i1ZklYrqQ60dtODSlhhN2m" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "2Kpy0Bv8JvrejX0J55KjAc",
+    "objectName" : "mt_SM_Airport_City",
+    "objectType" : "MTT",
+    "path" : "/Explore/Data _Integration/MDS_SM_SupplierManagement_To_Snowflake",
+    "providerName" : null,
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01D3R50Z0000000000M3"
+      },
+      "objectRefs" : [ "07fJJzT4TXkkU4qr4X91kg", "a7nrLxYyyu5es6Ljmi9Jah", "4zxaJDMwLg0c7NLsJUqUKy", "i1ZklYrqQ60dtODSlhhN2m" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "bOs4S3VCSo2k5bxZ8cqRgh",
+    "objectName" : "m_SM_IATA_Location",
+    "objectType" : "DTEMPLATE",
+    "path" : "/Explore/Data _Integration/MDS_SM_SupplierManagement_To_Snowflake",
+    "providerName" : null,
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01D3R5170000000000G1"
+      },
+      "objectRefs" : [ "07fJJzT4TXkkU4qr4X91kg", "i1ZklYrqQ60dtODSlhhN2m" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "i1ZklYrqQ60dtODSlhhN2m",
+    "objectName" : "US_SQL_SERVER_MDS",
+    "objectType" : "Connection",
+    "path" : "/SYS",
+    "providerName" : null,
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01D3R50B00000000001B"
+      },
+      "objectRefs" : [ "a7nrLxYyyu5es6Ljmi9Jah" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "D00187-agrSQL01\\DW:1433/MDS",
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    }
+  }, {
+    "objectGuid" : "6gIfYSSKh5iePI5KHjxBqf",
+    "objectName" : "tf_Load_MDS_SM",
+    "objectType" : "TASKFLOW",
+    "path" : "/Explore/Data _Integration/MDS_SM_SupplierManagement_To_Snowflake",
+    "providerName" : null,
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "ya-gt-36270708-2025-11-06T20:32:29.387Z::tf.xml"
+      },
+      "objectRefs" : [ "6wsMRKW1w5wi8x3oDac0kv", "8smqg3JaTP4fzg2GWd0rqt", "2Tptfvc47DVguCpm6rcAyL", "3tW7HzukF2sfv20QDcdVG5", "kzzWT0O4Y8KkE0Bk4A48Cf", "bopM7Jltxg5kgyWtiphdwd", "5xA2vWHsbmeePMRBo2YL45", "7wNRtnJyByBcoSVQLKrqMJ", "2Kpy0Bv8JvrejX0J55KjAc", "2X6nrO4wgyJe0JuJ00ewCv", "7IHVmA8RUISl7tEtpHVA0B", "6eYt5oieuWikfSYPu5GWew", "a9PDRAKOqCGc9l5r6TqXQo", "6sa8ob4vhmrevyYDwlUXsv", "5cOCkCkBVW1lLsV8hu5oAu" ],
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "2X6nrO4wgyJe0JuJ00ewCv",
+    "objectName" : "mt_SM_Airport",
+    "objectType" : "MTT",
+    "path" : "/Explore/Data _Integration/MDS_SM_SupplierManagement_To_Snowflake",
+    "providerName" : null,
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01D3R50Z0000000000LY"
+      },
+      "objectRefs" : [ "07fJJzT4TXkkU4qr4X91kg", "a7nrLxYyyu5es6Ljmi9Jah", "9NMEKUDnAeJe6akZDHI32P", "i1ZklYrqQ60dtODSlhhN2m" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "07fJJzT4TXkkU4qr4X91kg",
+    "objectName" : "US_Snowflake",
+    "objectType" : "Connection",
+    "path" : "/SYS",
+    "providerName" : null,
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01D3R50B000000000009"
+      },
+      "objectRefs" : [ "a7nrLxYyyu5es6Ljmi9Jah" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    }
+  }, {
+    "objectGuid" : "jUBhs8eZ3cxjie017WWdmK",
+    "objectName" : "m_SM_Hotel_Chain",
+    "objectType" : "DTEMPLATE",
+    "path" : "/Explore/Data _Integration/MDS_SM_SupplierManagement_To_Snowflake",
+    "providerName" : null,
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01D3R5170000000000FY"
+      },
+      "objectRefs" : [ "07fJJzT4TXkkU4qr4X91kg", "i1ZklYrqQ60dtODSlhhN2m" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "a9PDRAKOqCGc9l5r6TqXQo",
+    "objectName" : "mt_SM_GDS_Hotel_Property",
+    "objectType" : "MTT",
+    "path" : "/Explore/Data _Integration/MDS_SM_SupplierManagement_To_Snowflake",
+    "providerName" : null,
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01D3R50Z0000000000MD"
+      },
+      "objectRefs" : [ "07fJJzT4TXkkU4qr4X91kg", "a7nrLxYyyu5es6Ljmi9Jah", "i1ZklYrqQ60dtODSlhhN2m", "6EmHcFKF46EjJcQ8VxumAX" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "5cOCkCkBVW1lLsV8hu5oAu",
+    "objectName" : "mt_SM_World_Region",
+    "objectType" : "MTT",
+    "path" : "/Explore/Data _Integration/MDS_SM_SupplierManagement_To_Snowflake",
+    "providerName" : null,
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01D3R50Z0000000000MQ"
+      },
+      "objectRefs" : [ "07fJJzT4TXkkU4qr4X91kg", "a7nrLxYyyu5es6Ljmi9Jah", "6k27i1PDPoYeBKuwtyTBcf", "i1ZklYrqQ60dtODSlhhN2m" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "6wsMRKW1w5wi8x3oDac0kv",
+    "objectName" : "mt_SM_State_Province",
+    "objectType" : "MTT",
+    "path" : "/Explore/Data _Integration/MDS_SM_SupplierManagement_To_Snowflake",
+    "providerName" : null,
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01D3R50Z0000000000MP"
+      },
+      "objectRefs" : [ "07fJJzT4TXkkU4qr4X91kg", "a7nrLxYyyu5es6Ljmi9Jah", "42BoPLS10imeSJ8UBdXm6s", "i1ZklYrqQ60dtODSlhhN2m" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "8smqg3JaTP4fzg2GWd0rqt",
+    "objectName" : "mt_SM_City",
+    "objectType" : "MTT",
+    "path" : "/Explore/Data _Integration/MDS_SM_SupplierManagement_To_Snowflake",
+    "providerName" : null,
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01D3R50Z0000000000M4"
+      },
+      "objectRefs" : [ "07fJJzT4TXkkU4qr4X91kg", "a7nrLxYyyu5es6Ljmi9Jah", "0tP8X1mav7ue5ELlD0ntWG", "i1ZklYrqQ60dtODSlhhN2m" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "3tW7HzukF2sfv20QDcdVG5",
+    "objectName" : "mt_SM_DT_Region",
+    "objectType" : "MTT",
+    "path" : "/Explore/Data _Integration/MDS_SM_SupplierManagement_To_Snowflake",
+    "providerName" : null,
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01D3R50Z0000000000M7"
+      },
+      "objectRefs" : [ "07fJJzT4TXkkU4qr4X91kg", "a7nrLxYyyu5es6Ljmi9Jah", "grvPL0cClgDgDNCTTsu7gc", "i1ZklYrqQ60dtODSlhhN2m" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "kzzWT0O4Y8KkE0Bk4A48Cf",
+    "objectName" : "mt_SM_GDS",
+    "objectType" : "MTT",
+    "path" : "/Explore/Data _Integration/MDS_SM_SupplierManagement_To_Snowflake",
+    "providerName" : null,
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01D3R50Z0000000000ME"
+      },
+      "objectRefs" : [ "07fJJzT4TXkkU4qr4X91kg", "a7nrLxYyyu5es6Ljmi9Jah", "2XuljHmwkVmcsb4JN3CKwk", "i1ZklYrqQ60dtODSlhhN2m" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "5xA2vWHsbmeePMRBo2YL45",
+    "objectName" : "mt_SM_Rate_Category",
+    "objectType" : "MTT",
+    "path" : "/Explore/Data _Integration/MDS_SM_SupplierManagement_To_Snowflake",
+    "providerName" : null,
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01D3R50Z0000000000MO"
+      },
+      "objectRefs" : [ "ljBnHP6UwMCkh9SYnQSjuL", "07fJJzT4TXkkU4qr4X91kg", "a7nrLxYyyu5es6Ljmi9Jah", "i1ZklYrqQ60dtODSlhhN2m" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "ljBnHP6UwMCkh9SYnQSjuL",
+    "objectName" : "m_SM_Rate_Category",
+    "objectType" : "DTEMPLATE",
+    "path" : "/Explore/Data _Integration/MDS_SM_SupplierManagement_To_Snowflake",
+    "providerName" : null,
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01D3R5170000000000G2"
+      },
+      "objectRefs" : [ "07fJJzT4TXkkU4qr4X91kg", "i1ZklYrqQ60dtODSlhhN2m" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "42BoPLS10imeSJ8UBdXm6s",
+    "objectName" : "m_SM_State_Province",
+    "objectType" : "DTEMPLATE",
+    "path" : "/Explore/Data _Integration/MDS_SM_SupplierManagement_To_Snowflake",
+    "providerName" : null,
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01D3R5170000000000G3"
+      },
+      "objectRefs" : [ "07fJJzT4TXkkU4qr4X91kg", "i1ZklYrqQ60dtODSlhhN2m" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "7wNRtnJyByBcoSVQLKrqMJ",
+    "objectName" : "mt_SM_IATA_Location",
+    "objectType" : "MTT",
+    "path" : "/Explore/Data _Integration/MDS_SM_SupplierManagement_To_Snowflake",
+    "providerName" : null,
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01D3R50Z0000000000MN"
+      },
+      "objectRefs" : [ "07fJJzT4TXkkU4qr4X91kg", "a7nrLxYyyu5es6Ljmi9Jah", "bOs4S3VCSo2k5bxZ8cqRgh", "i1ZklYrqQ60dtODSlhhN2m" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "grvPL0cClgDgDNCTTsu7gc",
+    "objectName" : "m_SM_DT_Region",
+    "objectType" : "DTEMPLATE",
+    "path" : "/Explore/Data _Integration/MDS_SM_SupplierManagement_To_Snowflake",
+    "providerName" : null,
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01D3R5170000000000FK"
+      },
+      "objectRefs" : [ "07fJJzT4TXkkU4qr4X91kg", "i1ZklYrqQ60dtODSlhhN2m" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "cgZ9n5sMFiRjXwmxrHXMsW",
+    "objectName" : "m_SM_Country",
+    "objectType" : "DTEMPLATE",
+    "path" : "/Explore/Data _Integration/MDS_SM_SupplierManagement_To_Snowflake",
+    "providerName" : null,
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01D3R5170000000000FJ"
+      },
+      "objectRefs" : [ "07fJJzT4TXkkU4qr4X91kg", "i1ZklYrqQ60dtODSlhhN2m" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "6cBlJoDpmsLlQ2p4YF0GQf",
+    "objectName" : "m_SM_GDS_Rate_Code",
+    "objectType" : "DTEMPLATE",
+    "path" : "/Explore/Data _Integration/MDS_SM_SupplierManagement_To_Snowflake",
+    "providerName" : null,
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01D3R5170000000000FS"
+      },
+      "objectRefs" : [ "07fJJzT4TXkkU4qr4X91kg", "i1ZklYrqQ60dtODSlhhN2m" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "6eYt5oieuWikfSYPu5GWew",
+    "objectName" : "mt_SM_Hotel_Property",
+    "objectType" : "MTT",
+    "path" : "/Explore/Data _Integration/MDS_SM_SupplierManagement_To_Snowflake",
+    "providerName" : null,
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01D3R50Z0000000000MM"
+      },
+      "objectRefs" : [ "9AtbJTeQgHVe2DlJ2FvPYb", "07fJJzT4TXkkU4qr4X91kg", "a7nrLxYyyu5es6Ljmi9Jah", "i1ZklYrqQ60dtODSlhhN2m" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "7IHVmA8RUISl7tEtpHVA0B",
+    "objectName" : "mt_SM_Country",
+    "objectType" : "MTT",
+    "path" : "/Explore/Data _Integration/MDS_SM_SupplierManagement_To_Snowflake",
+    "providerName" : null,
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01D3R50Z0000000000M5"
+      },
+      "objectRefs" : [ "07fJJzT4TXkkU4qr4X91kg", "a7nrLxYyyu5es6Ljmi9Jah", "cgZ9n5sMFiRjXwmxrHXMsW", "i1ZklYrqQ60dtODSlhhN2m" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "k9Y8U6s8gg3bASTZzsfAEG",
+    "objectName" : "m_SM_Hotel_Master_Chain",
+    "objectType" : "DTEMPLATE",
+    "path" : "/Explore/Data _Integration/MDS_SM_SupplierManagement_To_Snowflake",
+    "providerName" : null,
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01D3R5170000000000FZ"
+      },
+      "objectRefs" : [ "07fJJzT4TXkkU4qr4X91kg", "i1ZklYrqQ60dtODSlhhN2m" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "6k27i1PDPoYeBKuwtyTBcf",
+    "objectName" : "m_SM_World_Region",
+    "objectType" : "DTEMPLATE",
+    "path" : "/Explore/Data _Integration/MDS_SM_SupplierManagement_To_Snowflake",
+    "providerName" : null,
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01D3R5170000000000G4"
+      },
+      "objectRefs" : [ "07fJJzT4TXkkU4qr4X91kg", "i1ZklYrqQ60dtODSlhhN2m" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "2hEaSS1ZVYTirWVgx05rmM",
+    "objectName" : "MDS_SM_SupplierManagement_To_Snowflake",
+    "objectType" : "Folder",
+    "path" : "/Explore/Data _Integration",
+    "providerName" : null,
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "objectRefs" : [ ],
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "Binary",
+        "documentState" : "COMPLETE"
+      }
+    }
+  }, {
+    "objectGuid" : "6sa8ob4vhmrevyYDwlUXsv",
+    "objectName" : "mt_SM_Hotel_Master_Chain",
+    "objectType" : "MTT",
+    "path" : "/Explore/Data _Integration/MDS_SM_SupplierManagement_To_Snowflake",
+    "providerName" : null,
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01D3R50Z0000000000ML"
+      },
+      "objectRefs" : [ "07fJJzT4TXkkU4qr4X91kg", "a7nrLxYyyu5es6Ljmi9Jah", "k9Y8U6s8gg3bASTZzsfAEG", "i1ZklYrqQ60dtODSlhhN2m" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "4zxaJDMwLg0c7NLsJUqUKy",
+    "objectName" : "m_SM_Airport_City",
+    "objectType" : "DTEMPLATE",
+    "path" : "/Explore/Data _Integration/MDS_SM_SupplierManagement_To_Snowflake",
+    "providerName" : null,
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01D3R5170000000000FH"
+      },
+      "objectRefs" : [ "07fJJzT4TXkkU4qr4X91kg", "i1ZklYrqQ60dtODSlhhN2m" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "9NMEKUDnAeJe6akZDHI32P",
+    "objectName" : "m_SM_Airport",
+    "objectType" : "DTEMPLATE",
+    "path" : "/Explore/Data _Integration/MDS_SM_SupplierManagement_To_Snowflake",
+    "providerName" : null,
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01D3R5170000000000FE"
+      },
+      "objectRefs" : [ "07fJJzT4TXkkU4qr4X91kg", "i1ZklYrqQ60dtODSlhhN2m" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "4HIbFLcoxkmd22lx6KbzoX",
+    "objectName" : "Data _Integration",
+    "objectType" : "Project",
+    "path" : "/Explore",
+    "providerName" : null,
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "objectRefs" : [ ],
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "This project contains Data Integration assets, organized by their respective source systems.",
+        "contentType" : "Binary",
+        "documentState" : "COMPLETE"
+      }
+    }
+  }, {
+    "objectGuid" : "6EmHcFKF46EjJcQ8VxumAX",
+    "objectName" : "m_SM_GDS_Hotel_Property",
+    "objectType" : "DTEMPLATE",
+    "path" : "/Explore/Data _Integration/MDS_SM_SupplierManagement_To_Snowflake",
+    "providerName" : null,
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01D3R5170000000000FQ"
+      },
+      "objectRefs" : [ "07fJJzT4TXkkU4qr4X91kg", "i1ZklYrqQ60dtODSlhhN2m" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  } ]
+}
