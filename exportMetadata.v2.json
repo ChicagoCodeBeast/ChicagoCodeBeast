@@ -1,0 +1,193 @@
+{
+  "name" : "Snowflake_To_MDS-1776707133925",
+  "sourceOrgId" : "laoRDdlSpqyeWUf1Juzbeh",
+  "sourceOrgName" : "Direct Travel Inc.  PROD",
+  "exportedObjects" : [ {
+    "objectGuid" : "07fJJzT4TXkkU4qr4X91kg",
+    "objectName" : "US_Snowflake",
+    "objectType" : "Connection",
+    "path" : "/SYS",
+    "providerName" : null,
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01D3R50B000000000009"
+      },
+      "objectRefs" : [ "a7nrLxYyyu5es6Ljmi9Jah" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    }
+  }, {
+    "objectGuid" : "a7nrLxYyyu5es6Ljmi9Jah",
+    "objectName" : "DT_US_Secure_Agent",
+    "objectType" : "AgentGroup",
+    "path" : "/SYS",
+    "providerName" : null,
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01D3R52500000000001G"
+      },
+      "objectRefs" : [ ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "6nwFixtq7Q8ftd8TEHH9IA",
+    "objectName" : "US_DW_SnowflakeToMDS",
+    "objectType" : "Connection",
+    "path" : "/SYS",
+    "providerName" : null,
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01D3R50B00000000001J"
+      },
+      "objectRefs" : [ "a7nrLxYyyu5es6Ljmi9Jah" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    }
+  }, {
+    "objectGuid" : "2DKvaRSd7unc12DLwgrjeQ",
+    "objectName" : "m_CM_T_CUSTOMER",
+    "objectType" : "DTEMPLATE",
+    "path" : "/Explore/Data _Integration/Snowflake_To_MDS",
+    "providerName" : null,
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01D3R5170000000000GT"
+      },
+      "objectRefs" : [ "07fJJzT4TXkkU4qr4X91kg", "6nwFixtq7Q8ftd8TEHH9IA" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "0gTfNl2I3WAeaTkWEURfO7",
+    "objectName" : "tf_CM_T_CUSTOMER",
+    "objectType" : "TASKFLOW",
+    "path" : "/Explore/Data _Integration/Snowflake_To_MDS",
+    "providerName" : null,
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "MnGbciZBpDUQbgd-gt-35707638-2026-01-06T17:02:59.626Z::tf.xml"
+      },
+      "objectRefs" : [ "dfBUVxUmdQij9M993U5I49" ],
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "dfBUVxUmdQij9M993U5I49",
+    "objectName" : "mt_CM_T_CUSTOMER",
+    "objectType" : "MTT",
+    "path" : "/Explore/Data _Integration/Snowflake_To_MDS",
+    "providerName" : null,
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01D3R50Z0000000000NU"
+      },
+      "objectRefs" : [ "07fJJzT4TXkkU4qr4X91kg", "a7nrLxYyyu5es6Ljmi9Jah", "6nwFixtq7Q8ftd8TEHH9IA", "2DKvaRSd7unc12DLwgrjeQ" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "8Wc6M6g6as4jRcjTmJYNCq",
+    "objectName" : "Snowflake_To_MDS",
+    "objectType" : "Folder",
+    "path" : "/Explore/Data _Integration",
+    "providerName" : null,
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "objectRefs" : [ ],
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "Binary",
+        "documentState" : "COMPLETE"
+      }
+    }
+  }, {
+    "objectGuid" : "4HIbFLcoxkmd22lx6KbzoX",
+    "objectName" : "Data _Integration",
+    "objectType" : "Project",
+    "path" : "/Explore",
+    "providerName" : null,
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "objectRefs" : [ ],
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "This project contains Data Integration assets, organized by their respective source systems.",
+        "contentType" : "Binary",
+        "documentState" : "COMPLETE"
+      }
+    }
+  } ]
+}

@@ -1,0 +1,9 @@
+objectPath,objectName,objectType,id
+/SYS,US_Snowflake,Connection,07fJJzT4TXkkU4qr4X91kg
+/SYS,DT_US_Secure_Agent,AgentGroup,a7nrLxYyyu5es6Ljmi9Jah
+/SYS,US_DW_SnowflakeToMDS,Connection,6nwFixtq7Q8ftd8TEHH9IA
+/Explore/Data _Integration/Snowflake_To_MDS,m_CM_T_CUSTOMER,DTEMPLATE,2DKvaRSd7unc12DLwgrjeQ
+/Explore/Data _Integration/Snowflake_To_MDS,tf_CM_T_CUSTOMER,TASKFLOW,0gTfNl2I3WAeaTkWEURfO7
+/Explore/Data _Integration/Snowflake_To_MDS,mt_CM_T_CUSTOMER,MTT,dfBUVxUmdQij9M993U5I49
+/Explore/Data _Integration,Snowflake_To_MDS,Folder,8Wc6M6g6as4jRcjTmJYNCq
+/Explore,Data _Integration,Project,4HIbFLcoxkmd22lx6KbzoX
