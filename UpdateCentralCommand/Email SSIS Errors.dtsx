@@ -108,8 +108,6 @@ INNER JOIN SSISDB.catalog.event_messages AS m
 ORDER BY m.message_time, m.event_message_id;</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
-  <DTS:Property
-    DTS:Name="ObjectName">Email SSIS Errors</DTS:Property>
   <DTS:Executables>
     <DTS:Executable
       DTS:refId="Package\Notify If Errors"
