@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33529.622
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "UpdateCentralCommand", "UpdateCentralCommand.dtproj", "{F593180E-FEC6-4AB5-B74E-246763DC86DB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F593180E-FEC6-4AB5-B74E-246763DC86DB}.Development|Default.ActiveCfg = Development
+		{F593180E-FEC6-4AB5-B74E-246763DC86DB}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {182AC8FA-0111-44BB-AD81-D9C4B8267BB0}
+	EndGlobalSection
+EndGlobal
