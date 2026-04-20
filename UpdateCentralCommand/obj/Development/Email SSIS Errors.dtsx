@@ -5,14 +5,14 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="TOR-DEV-RD1"
   DTS:CreatorName="DT\stomas"
-  DTS:DTSID="{DD9F79D3-91BC-49C8-996E-5B8C3AAC3BEA}"
+  DTS:DTSID="{AA330A90-09D1-4D6B-9C84-5A3C8F87F7C1}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="16.0.5467.0"
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
   DTS:VersionBuild="11"
-  DTS:VersionGUID="{0178F710-4025-47E9-95A1-009669A37747}">
+  DTS:VersionGUID="{9A50D245-CFC0-4E0E-ABFC-B92E79A14EF8}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>

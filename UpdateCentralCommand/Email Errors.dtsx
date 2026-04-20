@@ -67,7 +67,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="smtp_subject">
       <DTS:VariableValue
-        DTS:DataType="8">Central Command API Update Failures</DTS:VariableValue>
+        DTS:DataType="8">UpdateCentralCommand SSIS last run errors</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -76,7 +76,36 @@
       DTS:Namespace="User"
       DTS:ObjectName="sqlCC_Update_Errors">
       <DTS:VariableValue
-        DTS:DataType="8">SELECT  q.PK ,q.BatchID , q.Object , q.Description ,q.[WebResponse] ,q.UpdateDateTime ,q.CreateDateTime from CC.[UpdateQueue] q where q.UpdateStatus='E' order by q.BatchID, PK</DTS:VariableValue>
+        DTS:DataType="8">;WITH LastProjectExecution AS (
+    SELECT TOP (1)
+        e.execution_id,
+        e.folder_name,
+        e.project_name,
+        e.package_name,
+        e.environment_folder_name,
+        e.environment_name,
+        e.start_time
+    FROM SSISDB.catalog.executions AS e
+    WHERE e.project_name = 'UpdateCentralCommand'
+      AND e.package_name = 'Update Central Command.dtsx'
+    ORDER BY e.start_time DESC
+)
+SELECT
+    CAST(ROW_NUMBER() OVER (ORDER BY m.message_time, m.event_message_id) AS INT) AS PK,
+    CAST(lpe.execution_id AS INT) AS BatchID,
+    CAST(
+        ISNULL(lpe.package_name, lpe.project_name) + ' | Environment: ' + ISNULL(lpe.environment_name, '(none)')
+        AS VARCHAR(MAX)
+    ) AS [Object],
+    CAST('Environment folder: ' + ISNULL(lpe.environment_folder_name, lpe.folder_name) AS VARCHAR(MAX)) AS [Description],
+    CAST(m.message AS VARCHAR(MAX)) AS [WebResponse],
+    CAST(m.message_time AS DATETIME2(7)) AS [UpdateDateTime],
+    CAST(lpe.start_time AS DATETIME2(7)) AS [CreateDateTime]
+FROM LastProjectExecution AS lpe
+INNER JOIN SSISDB.catalog.event_messages AS m
+    ON m.operation_id = lpe.execution_id
+    AND m.event_name = 'OnError'
+ORDER BY m.message_time, m.event_message_id;</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
