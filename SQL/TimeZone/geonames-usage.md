@@ -1,24 +1,26 @@
 # GeoNames Timezone Lookup (SQL Server)
 
-This guide documents how to use GeoNames `allCountries.txt` with SQL Server to map airport latitude/longitude to an IANA timezone (for example, `America/Chicago`).
+This guide explains how to use GeoNames `allCountries.txt` to map airport coordinates in `[MDS].[mdm].[Airport]` to an IANA timezone (for example, `America/Chicago`).
+
+## Quick start
+
+1. Load `allCountries.txt` into `dbo.geonames_allcountries`.
+2. Add computed `GeoPoint` and a spatial index.
+3. Run the preview query to inspect matches and distances.
+4. Populate `[MDS].[mdm].[Airport].[TimeZone]` from nearest matches.
 
 ---
 
-## 1) Data source
+## 1) Data source and required fields
 
-- GeoNames download page: `https://www.geonames.org/`
-- File used: `allCountries.txt` (tab-delimited)
+- GeoNames: `https://www.geonames.org/`
+- File: `allCountries.txt` (tab-delimited, UTF-8)
+- Fields used:
+  - `latitude`
+  - `longitude`
+  - `timezone`
 
-Relevant columns used in this workflow:
-- `latitude`
-- `longitude`
-- `timezone`
-
----
-
-## 2) Target airport table
-
-Current airport source:
+Your airport table shape:
 
 ```sql
 SELECT
@@ -28,25 +30,68 @@ SELECT
 FROM [MDS].[mdm].[Airport];
 ```
 
-Assumption:
-- `[Lat]` and `[Long]` are decimal numeric values.
+Assumption: `[Lat]` and `[Long]` are decimal numeric values.
 
 ---
 
-## 3) SQL workflow summary
+## 2) Optional load example (if table is not already populated)
 
-1. Load GeoNames rows into `dbo.geonames_allcountries`.
-2. Add computed `geography` point on GeoNames rows.
-3. Create a spatial index on the computed point.
-4. For each airport row, pick the nearest GeoNames row and use its `timezone`.
+If you already have `dbo.geonames_allcountries`, skip this section.
 
-This is a nearest-neighbor method. It is usually good, but can be incorrect close to timezone borders.
+```sql
+-- Example structure (minimum needed for timezone matching)
+CREATE TABLE dbo.geonames_allcountries (
+    geonameid BIGINT NOT NULL PRIMARY KEY,
+    latitude FLOAT NOT NULL,
+    longitude FLOAT NOT NULL,
+    timezone NVARCHAR(64) NULL
+);
+```
+
+Load data (example only; adjust path and full schema as needed):
+
+```sql
+BULK INSERT dbo.geonames_allcountries
+FROM 'C:\data\allCountries.txt'
+WITH (
+    FIELDTERMINATOR = '\t',
+    ROWTERMINATOR = '0x0a',
+    CODEPAGE = '65001',
+    TABLOCK
+);
+```
 
 ---
 
-## 4) Core query pattern
+## 3) Spatial setup (recommended)
 
-Preview timezone mapping for each airport:
+```sql
+IF COL_LENGTH('dbo.geonames_allcountries', 'GeoPoint') IS NULL
+BEGIN
+    ALTER TABLE dbo.geonames_allcountries
+    ADD GeoPoint AS geography::Point(latitude, longitude, 4326) PERSISTED;
+END
+GO
+
+IF NOT EXISTS (
+    SELECT 1
+    FROM sys.indexes
+    WHERE name = 'IX_geonames_allcountries_GeoPoint'
+      AND object_id = OBJECT_ID('dbo.geonames_allcountries')
+)
+BEGIN
+    CREATE SPATIAL INDEX IX_geonames_allcountries_GeoPoint
+    ON dbo.geonames_allcountries(GeoPoint)
+    USING GEOGRAPHY_AUTO_GRID;
+END
+GO
+```
+
+---
+
+## 4) Preview matches before updating
+
+Use this to validate quality and capture distance in meters:
 
 ```sql
 SELECT
@@ -72,16 +117,19 @@ WHERE a.[Lat] IS NOT NULL
 
 ---
 
-## 5) Update airport timezone column
+## 5) Update airport timezone
 
-If needed, add destination column:
+Add destination column if needed:
 
 ```sql
-ALTER TABLE [MDS].[mdm].[Airport]
-ADD [TimeZone] NVARCHAR(64) NULL;
+IF COL_LENGTH('[MDS].[mdm].[Airport]', 'TimeZone') IS NULL
+BEGIN
+    ALTER TABLE [MDS].[mdm].[Airport]
+    ADD [TimeZone] NVARCHAR(64) NULL;
+END
 ```
 
-Populate timezone from nearest GeoNames row:
+Populate timezone from nearest GeoNames point:
 
 ```sql
 UPDATE a
@@ -103,36 +151,43 @@ WHERE a.[TimeZone] IS NULL
 
 ---
 
-## 6) Performance recommendations
+## 6) Recommended quality checks
 
-- Keep a computed point column on GeoNames:
-
-```sql
-ALTER TABLE dbo.geonames_allcountries
-ADD GeoPoint AS geography::Point(latitude, longitude, 4326) PERSISTED;
-```
-
-- Add a spatial index:
+Review far-distance matches (possible low-confidence results):
 
 ```sql
-CREATE SPATIAL INDEX IX_geonames_allcountries_GeoPoint
-ON dbo.geonames_allcountries(GeoPoint)
-USING GEOGRAPHY_AUTO_GRID;
+SELECT TOP (200)
+    a.Name,
+    a.[Lat],
+    a.[Long],
+    nn.timezone,
+    nn.distance_m
+FROM [MDS].[mdm].[Airport] a
+OUTER APPLY (
+    SELECT TOP (1)
+        g.timezone,
+        g.GeoPoint.STDistance(geography::Point(a.[Lat], a.[Long], 4326)) AS distance_m
+    FROM dbo.geonames_allcountries g
+    WHERE g.timezone IS NOT NULL
+    ORDER BY g.GeoPoint.STDistance(geography::Point(a.[Lat], a.[Long], 4326))
+) nn
+WHERE nn.distance_m > 50000 -- 50 km threshold example
+ORDER BY nn.distance_m DESC;
 ```
 
 ---
 
-## 7) Accuracy considerations
+## 7) Accuracy notes
 
-- Nearest-point matching may fail near timezone boundaries.
-- Record and review `distance_m` for quality control.
-- Optionally enforce a max distance threshold and manually review outliers.
-- For strict boundary accuracy, consider a timezone polygon dataset.
+- This method is nearest-point matching, not polygon boundary matching.
+- It is usually effective for airports, but can be wrong near timezone borders.
+- Keep `distance_m` for QA and investigate outliers.
+- For strict boundary accuracy, use timezone boundary polygons.
 
 ---
 
-## 8) Repository files
+## 8) Related repository files
 
 - SQL implementation script: `SQL/TimeZone/sqlserver-airport-timezone-from-geonames.sql`
-- Conversation context log: `SQL/TimeZone/conversation-log.md`
+- Conversation log: `SQL/TimeZone/conversation-log.md`
 
